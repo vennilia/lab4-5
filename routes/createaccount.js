@@ -15,7 +15,7 @@ router.post('/', function(req, res, next) {
 
   console.log(createaccount);
 
-  let sitecreateaccount = fs.readFileSync('./createaccout.json');
+  let createaccountData = fs.readFileSync('./createaccout.json');
 
 
   let sitecreateaccount = JSON.parse(createaccountData);
@@ -31,7 +31,7 @@ router.post('/', function(req, res, next) {
           console.log('Successfully wrote file')
       }
   })
-
+  res.render('display', createaccount);
 
 });
 
